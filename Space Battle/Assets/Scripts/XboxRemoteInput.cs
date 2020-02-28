@@ -5,11 +5,14 @@ using UnityEngine;
 public class XboxRemoteInput : MonoBehaviour
 {
     private Transform myT;
+    private Rigidbody myRb;
     private float rotationSpeed = 2f;
+    public float speed = 10f;
 
     void Start()
     {
         myT = GetComponent<Transform>();
+        myRb = GetComponent<Rigidbody>();
     }
 
     
@@ -21,8 +24,13 @@ public class XboxRemoteInput : MonoBehaviour
         Vector3 lookhereX = new Vector3(verticalRotation, horizontalRotation, 0);
         myT.Rotate(lookhereX);
 
-        //Debug.Log(RT);
-        float RT = Input.GetAxis("RT");
         
+        float RT = Input.GetAxis("RT");
+        float LT = Input.GetAxis("LT");
+        //Debug.Log(RT);
+
+        //myRb.velocity = new Vector3 (myRb.velocity.x, myRb.velocity.y, myRb.velocity.x + RT * speed);
+        myT.position += myT.forward * + RT * speed;
+        myT.position += (myT.forward * -1) * + LT * speed;
     }
 }
