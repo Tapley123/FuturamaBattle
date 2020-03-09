@@ -7310,7 +7310,7 @@ MeshCollider:
   m_GameObject: {fileID: 5958835120380138408}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -8783,7 +8783,7 @@ MeshCollider:
   m_GameObject: {fileID: 5958835120851837456}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -10754,7 +10754,7 @@ MeshCollider:
   m_GameObject: {fileID: 5958835120859502363}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -17909,7 +17909,7 @@ MeshCollider:
   m_GameObject: {fileID: 5958835121396010155}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -22898,7 +22898,7 @@ MeshCollider:
   m_GameObject: {fileID: 5958835121817869214}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -22927,7 +22927,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5958835121923982874}
-  m_LocalRotation: {x: -0, y: 0.69906765, z: -0, w: 0.71505564}
+  m_LocalRotation: {x: 0, y: 0.6990645, z: 0, w: 0.7150586}
   m_LocalPosition: {x: -0.6, y: 35.59, z: 4.45}
   m_LocalScale: {x: 0.069780596, y: 0.069780596, z: 0.069780596}
   m_Children:
@@ -22960,6 +22960,9 @@ MonoBehaviour:
   arriveEnabled: 0
   slowingDistance: 10
   banking: 0.1
+  playerSteeringEnabled: 0
+  playerForce: 100
+  damping: 1
 --- !u!1 &5958835122263067200
 GameObject:
   m_ObjectHideFlags: 0
@@ -24996,7 +24999,7 @@ MeshCollider:
   m_GameObject: {fileID: 5958835122263067200}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -26508,7 +26511,7 @@ MeshCollider:
   m_GameObject: {fileID: 8685662981629833967}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
