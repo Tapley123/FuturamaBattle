@@ -89,10 +89,4 @@ public class Vformation : MonoBehaviour
         schoolbusShip.transform.LookAt(schoolbusRotPos);
         tieFighterShip.transform.LookAt(tieFighterRotPos);
     }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawSphere(mobShipRotPos, 1);
-    }
 }
