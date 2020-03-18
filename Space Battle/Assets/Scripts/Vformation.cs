@@ -10,7 +10,7 @@ public class Vformation : MonoBehaviour
     private Vector3 planetExpressDirection, mobShipDirection, globetrotterDirection, deloreanDirection, schoolbusDirection, tieFighterDirection;
     private Quaternion planetExpressQuaternion, mobShipQuaternion, globetrotterQuaternion, deloreanQuaternion, schoolbusQuaternion, tieFighterQuaternion;
     private float LerpValue = 0f;
-    public float fallIntoPositionTime = 10f, rotationSpeed = 1f;
+    public float fallIntoPositionTime = 10f;
     [SerializeField] private float rotationLookAtDistance = 10f; //so the ships face a position a bit in front of their position to stop them spinning in place
 
     void Awake()
