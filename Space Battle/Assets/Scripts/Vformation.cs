@@ -15,6 +15,7 @@ public class Vformation : MonoBehaviour
 
     void Awake()
     {
+        fallIntoPositionTime *= 10;
         //V formation position transforms
         planetExpressPos = GameObject.Find("PlanetExpress Pos").transform;
         mobShipPos = GameObject.Find("MobShip Pos").transform;
