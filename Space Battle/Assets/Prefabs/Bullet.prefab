@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5724223407403294605}
   - component: {fileID: 5724223407403294604}
   - component: {fileID: 5724223407403294579}
+  - component: {fileID: 8008808125383197857}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -26,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5724223407403294578}
-  m_LocalRotation: {x: 0.48801857, y: -0.5197268, z: 0.5034429, w: 0.4881262}
+  m_LocalRotation: {x: 0.48801744, y: -0.51973087, z: 0.5034409, w: 0.48812503}
   m_LocalPosition: {x: 9.95, y: 33.9, z: 4.8}
-  m_LocalScale: {x: 0.39821178, y: 0.89689237, z: 0.39821178}
+  m_LocalScale: {x: 0.21390425, y: 0.08237294, z: 1.3154129}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,3 +94,17 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8008808125383197857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724223407403294578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2641ece3eee2f045acc39f642bb2014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteBulletTime: 5
+  speed: 20
