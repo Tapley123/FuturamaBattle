@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Vformation : MonoBehaviour
 {
+    public static bool inFormation = false;
+
     private Transform planetExpressPos, mobShipPos, globetrotterPos, deloreanPos, schoolbusPos, tieFighterPos;
     private Vector3 planetExpressRotPos, mobShipRotPos, globetrotterRotPos, deloreanRotPos, schoolbusRotPos, tieFighterRotPos;
     private GameObject planetExpressShip, mobShip, globetrotterShip, deloreanShip, schoolbusShip, tieFighterShip;
@@ -64,6 +66,16 @@ public class Vformation : MonoBehaviour
     void Update()
     {
         FallIn();
+
+        //Check if the planet express ship has entered the formation/////////////////////////////////////////////////////////////////////////////
+        float distance = Vector3.Distance(planetExpressShip.transform.position, planetExpressPos.position);
+        //Debug.Log("Distance = " + distance);
+        if(distance <= 5)
+        {
+            Debug.Log("In Formation");
+            inFormation = true;
+            planetExpressShip.GetComponent<Shoot>().shoot = true;
+        }
     }
 
     private void FallIn()
