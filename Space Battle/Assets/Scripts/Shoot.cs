@@ -7,9 +7,11 @@ public class Shoot : MonoBehaviour
     public GameObject bullet;
     public Transform bulletSpawn;
 
+    private float bulletSpeed = 20f;
+
     public bool shoot = false;
-    float timer = 0;
-    private float timeInbetweenAutoFire = 3f;
+    private float elapsed = 0f;
+    private float timeInbetweenBullets = 0.3f; // time inbetween each bullet firing
 
     void Update()
     {
@@ -19,28 +21,29 @@ public class Shoot : MonoBehaviour
         }
 
 
-
-        while (shoot)
+        elapsed += Time.deltaTime; // get time that elapsed
+        if (elapsed >= timeInbetweenBullets)// && shoot)
         {
-            InvokeRepeating("ShootBullet", 0f, 10f);
-            //StartCoroutine(ShootCoroutine(1));
+            elapsed = elapsed % timeInbetweenBullets; //reset the timer
+            ShootBullet();
         }
+
+
     }
 
     void ShootBullet()
     {
-        GameObject.Instantiate(bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
-    }
+        GameObject instance = GameObject.Instantiate(bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+        instance.transform.forward = bulletSpawn.transform.forward;
+        //instance.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward * bulletSpeed, ForceMode.Impulse);
+        //instance.transform.position += (Vector3.left * -1) * Time.deltaTime * bulletSpeed;
 
-    public IEnumerator ShootCoroutine(float time)
-    {
-        bool flag = true;
-
-        while (flag)
-        {
-            Debug.Log("Bam");
-            GameObject.Instantiate(bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
-            yield return new WaitForSeconds(time);
-        }
+        /*
+        GameObject i = GameObject.Instantiate(bullet);
+        i.transform.position = bulletSpawn.position;
+        Vector3 rotation = i.transform.rotation.eulerAngles;
+        i.transform.rotation = Quaternion.Euler(rotation.x, transform.eulerAngles.y, rotation.z);
+        i.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward * bulletSpeed, ForceMode.Impulse);
+        */
     }
 }

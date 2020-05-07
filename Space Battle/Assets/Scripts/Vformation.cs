@@ -70,7 +70,7 @@ public class Vformation : MonoBehaviour
         //Check if the planet express ship has entered the formation/////////////////////////////////////////////////////////////////////////////
         float distance = Vector3.Distance(planetExpressShip.transform.position, planetExpressPos.position);
         //Debug.Log("Distance = " + distance);
-        if(distance <= 5)
+        if(distance <= 1)
         {
             Debug.Log("In Formation");
             inFormation = true;
