@@ -5,6 +5,7 @@ using UnityEngine;
 public class Vformation : MonoBehaviour
 {
     public static bool inFormation = false;
+    public static bool allShoot = false;
 
     private Transform planetExpressPos, mobShipPos, globetrotterPos, deloreanPos, schoolbusPos, tieFighterPos;
     private Vector3 planetExpressRotPos, mobShipRotPos, globetrotterRotPos, deloreanRotPos, schoolbusRotPos, tieFighterRotPos;
@@ -66,16 +67,12 @@ public class Vformation : MonoBehaviour
     void Update()
     {
         FallIn();
+        InFormationCheck();
 
-        //Check if the planet express ship has entered the formation/////////////////////////////////////////////////////////////////////////////
-        float distance = Vector3.Distance(planetExpressShip.transform.position, planetExpressPos.position);
-        //Debug.Log("Distance = " + distance);
-        if(distance <= 1)
-        {
-            Debug.Log("In Formation");
-            inFormation = true;
-            planetExpressShip.GetComponent<Shoot>().shoot = true;
-        }
+        if (allShoot)
+            AllShoot();
+        else
+            StopShooting();
     }
 
     private void FallIn()
@@ -101,5 +98,34 @@ public class Vformation : MonoBehaviour
         deloreanShip.transform.LookAt(deloreanRotPos);
         schoolbusShip.transform.LookAt(schoolbusRotPos);
         tieFighterShip.transform.LookAt(tieFighterRotPos);
+    }
+
+    private void InFormationCheck()
+    {
+        float distance = Vector3.Distance(planetExpressShip.transform.position, planetExpressPos.position);
+        if (distance <= 1)
+        {
+            //Debug.Log("In Formation");
+            inFormation = true;
+        }
+    }
+
+    public void AllShoot()
+    {
+        planetExpressShip.GetComponent<Shoot>().shoot = true;
+        mobShip.GetComponent<Shoot>().shoot = true;
+        globetrotterShip.GetComponent<Shoot>().shoot = true;
+        deloreanShip.GetComponent<Shoot>().shoot = true;
+        schoolbusShip.GetComponent<Shoot>().shoot = true;
+        tieFighterShip.GetComponent<Shoot>().shoot = true;
+    }
+    public void StopShooting()
+    {
+        planetExpressShip.GetComponent<Shoot>().shoot = false;
+        mobShip.GetComponent<Shoot>().shoot = false;
+        globetrotterShip.GetComponent<Shoot>().shoot = false;
+        deloreanShip.GetComponent<Shoot>().shoot = false;
+        schoolbusShip.GetComponent<Shoot>().shoot = false;
+        tieFighterShip.GetComponent<Shoot>().shoot = false;
     }
 }

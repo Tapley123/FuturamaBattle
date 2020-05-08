@@ -22,7 +22,7 @@ public class Shoot : MonoBehaviour
 
 
         elapsed += Time.deltaTime; // get time that elapsed
-        if (elapsed >= timeInbetweenBullets)// && shoot)
+        if (elapsed >= timeInbetweenBullets && shoot)
         {
             elapsed = elapsed % timeInbetweenBullets; //reset the timer
             ShootBullet();
@@ -35,15 +35,5 @@ public class Shoot : MonoBehaviour
     {
         GameObject instance = GameObject.Instantiate(bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
         instance.transform.forward = bulletSpawn.transform.forward;
-        //instance.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward * bulletSpeed, ForceMode.Impulse);
-        //instance.transform.position += (Vector3.left * -1) * Time.deltaTime * bulletSpeed;
-
-        /*
-        GameObject i = GameObject.Instantiate(bullet);
-        i.transform.position = bulletSpawn.position;
-        Vector3 rotation = i.transform.rotation.eulerAngles;
-        i.transform.rotation = Quaternion.Euler(rotation.x, transform.eulerAngles.y, rotation.z);
-        i.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward * bulletSpeed, ForceMode.Impulse);
-        */
     }
 }
