@@ -19,7 +19,7 @@ public class MoveInFormation : VFBase
         for (int i = 0; i <= ships.Length - 1; i++)
         {
             ships[i].transform.position = Vector3.MoveTowards(ships[i].transform.position, currentTarget.position, 3 * Time.deltaTime);
-            //ships[i].transform.LookAt(new Vector3(currentTarget.position.x, currentTarget.position.y, currentTarget.position.z)); //rotate to position
+            ships[i].transform.LookAt(new Vector3(currentTarget.position.x, currentTarget.position.y, currentTarget.position.z)); //rotate to position
         }
     }
 }
