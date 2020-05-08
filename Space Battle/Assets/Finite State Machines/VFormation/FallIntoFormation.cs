@@ -17,6 +17,8 @@ public class FallIntoFormation : VFBase
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateUpdate(animator, stateInfo, layerIndex);
+
         //rotation
         for (int i = 0; i <= formationPositions.Length - 1; i++)
         {

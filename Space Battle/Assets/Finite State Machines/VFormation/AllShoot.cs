@@ -14,6 +14,8 @@ public class AllShoot : VFBase
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateUpdate(animator, stateInfo, layerIndex);
+
         elapsed += Time.deltaTime; // get time that elapsed
         if (elapsed >= timeInbetweenBullets)// && shoot)
         {

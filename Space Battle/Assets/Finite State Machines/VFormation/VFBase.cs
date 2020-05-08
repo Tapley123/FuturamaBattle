@@ -11,6 +11,13 @@ public class VFBase : StateMachineBehaviour
     public GameObject bullet;
     public static Animator animator;
 
+    private float elapsed = 0f;
+    private float timeInbetweenBullets = 0.3f; // time inbetween each bullet firing
+    public static bool allShoot = false;
+
+    public static GameObject[] deathStars = new GameObject[9];
+    public static Transform currentTarget;
+
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -39,5 +46,33 @@ public class VFBase : StateMachineBehaviour
         bulletSpawnPositions[3] = GameObject.Find("3_BulletSpawn").transform;
         bulletSpawnPositions[4] = GameObject.Find("4_BulletSpawn").transform;
         bulletSpawnPositions[5] = GameObject.Find("5_BulletSpawn").transform;
+
+        //deathstars
+        deathStars[0] = GameObject.Find("0_Target");
+        deathStars[1] = GameObject.Find("0_Target (1)");
+        deathStars[2] = GameObject.Find("0_Target (2)");
+        deathStars[3] = GameObject.Find("0_Target (3)");
+        deathStars[4] = GameObject.Find("0_Target (4)");
+        deathStars[5] = GameObject.Find("0_Target (5)");
+        deathStars[6] = GameObject.Find("0_Target (6)");
+        deathStars[7] = GameObject.Find("0_Target (7)");
+        deathStars[8] = GameObject.Find("0_Target (8)");
+    }
+
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        if(allShoot)
+        {
+            elapsed += Time.deltaTime; // get time that elapsed
+            if (elapsed >= timeInbetweenBullets)// && shoot)
+            {
+                elapsed = elapsed % timeInbetweenBullets; //reset the timer
+                for (int i = 0; i < bulletSpawnPositions.Length; i++)
+                {
+                    GameObject instance = GameObject.Instantiate(bullet, bulletSpawnPositions[i].position, bulletSpawnPositions[i].rotation);
+                    instance.transform.forward = bulletSpawnPositions[i].forward;
+                }
+            }
+        }
     }
 }
