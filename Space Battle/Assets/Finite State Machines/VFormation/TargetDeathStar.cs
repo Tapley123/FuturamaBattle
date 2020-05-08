@@ -14,6 +14,8 @@ public class TargetDeathStar : VFBase
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
 
+        
+
         for(int i = 0; i < deathStars.Length; i++)
         {
             if(deathStars[i].GetComponent<DeathstarMovement>().alive)
@@ -23,7 +25,7 @@ public class TargetDeathStar : VFBase
             }
         }
 
-        Debug.Log("Current Target = " + currentTarget);
+        //Debug.Log("Current Target = " + currentTarget);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

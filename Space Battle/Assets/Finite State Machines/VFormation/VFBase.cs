@@ -11,10 +11,6 @@ public class VFBase : StateMachineBehaviour
     public GameObject bullet;
     public static Animator animator;
 
-    private float elapsed = 0f;
-    private float timeInbetweenBullets = 0.3f; // time inbetween each bullet firing
-    public static bool allShoot = false;
-
     public static GameObject[] deathStars = new GameObject[9];
     public static Transform currentTarget;
 
@@ -61,18 +57,6 @@ public class VFBase : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(allShoot)
-        {
-            elapsed += Time.deltaTime; // get time that elapsed
-            if (elapsed >= timeInbetweenBullets)// && shoot)
-            {
-                elapsed = elapsed % timeInbetweenBullets; //reset the timer
-                for (int i = 0; i < bulletSpawnPositions.Length; i++)
-                {
-                    GameObject instance = GameObject.Instantiate(bullet, bulletSpawnPositions[i].position, bulletSpawnPositions[i].rotation);
-                    instance.transform.forward = bulletSpawnPositions[i].forward;
-                }
-            }
-        }
+        
     }
 }

@@ -41,8 +41,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallIntoPositionTime: 3
-  bullet: {fileID: 0}
-  target: {fileID: 0}
+  bullet: {fileID: 5724223407403294578, guid: 105bbc64d51df5142b5f5004839dc919, type: 3}
 --- !u!1107 &-4264128722964184982
 AnimatorStateMachine:
   serializedVersion: 5
@@ -99,7 +98,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -113,6 +112,34 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &2788134467308092049
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacfc1a8fbc844418aa304137690808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallIntoPositionTime: 3
+  bullet: {fileID: 5724223407403294578, guid: 105bbc64d51df5142b5f5004839dc919, type: 3}
+--- !u!114 &2906582682937493443
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da3736360304cb4e8ed721434e08419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallIntoPositionTime: 3
+  bullet: {fileID: 5724223407403294578, guid: 105bbc64d51df5142b5f5004839dc919, type: 3}
 --- !u!1102 &3356140464925061931
 AnimatorState:
   serializedVersion: 5
@@ -126,6 +153,8 @@ AnimatorState:
   m_Transitions: []
   m_StateMachineBehaviours:
   - {fileID: -4442385391907838329}
+  - {fileID: 2788134467308092049}
+  - {fileID: 2906582682937493443}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
