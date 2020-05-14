@@ -24,6 +24,7 @@ public class AllShoot : VFBase
             {
                 GameObject instance = GameObject.Instantiate(bullet, bulletSpawnPositions[i].position, bulletSpawnPositions[i].rotation);
                 instance.transform.forward = bulletSpawnPositions[i].forward;
+                instance.transform.parent = GameObject.Find("BulletHolder").transform;
             }
         }
     }

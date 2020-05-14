@@ -21,6 +21,9 @@ public class TargetDeathStar : VFBase
             if(deathStars[i].GetComponent<DeathstarMovement>().alive)
             {
                 currentTarget = deathStars[i].transform;
+                //animator.SetTrigger("TargetAquired");
+                animator.SetBool("TargetAquired", true);
+                //return;
                 break;
             }
         }
