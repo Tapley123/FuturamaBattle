@@ -11,7 +11,7 @@ public class DeathstarMovement : MonoBehaviour
 
     private void Start()
     {
-        stateMachineAnimator = GameObject.Find("V Formation").GetComponent<Animator>();
+        stateMachineAnimator = GameObject.Find("Planet Express 1").GetComponent<Animator>();
     }
 
     void Update()
@@ -25,7 +25,6 @@ public class DeathstarMovement : MonoBehaviour
 
         if(!alive)
         {
-            stateMachineAnimator.SetTrigger("CurrentTargetDead");
             transform.position = new Vector3(10000, 10000, 10000);
         }
     }

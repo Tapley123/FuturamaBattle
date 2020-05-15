@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetDeathStar : VFBase
+public class TargetDeathStar : Base
 {
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -16,14 +16,11 @@ public class TargetDeathStar : VFBase
 
         
 
-        for(int i = 0; i < deathStars.Length; i++)
+        for(int i = 0; i < deathStars.Count; i++)
         {
             if(deathStars[i].GetComponent<DeathstarMovement>().alive)
             {
-                currentTarget = deathStars[i].transform;
-                //animator.SetTrigger("TargetAquired");
-                animator.SetBool("TargetAquired", true);
-                //return;
+                target = deathStars[i].transform;
                 break;
             }
         }

@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Base : StateMachineBehaviour
 {
-    public List<GameObject> ships = new List<GameObject>();
-    public List<Vector3> positions = new List<Vector3>();
-    private Transform planetExpressTransform;
+    public static List<GameObject> ships = new List<GameObject>();
+    public static List<Vector3> positions = new List<Vector3>();
+    public static List<Transform> bulletPosition = new List<Transform>();
+    public static List<GameObject> guns = new List<GameObject>();
+    public static List<GameObject> deathStars = new List<GameObject>();
+    public static Transform planetExpressTransform;
+    public static Transform target;
+    public static float moveSpeed = 10f, rotationSpeed = 1f;
+
+    
     private float row = 20f, line = 20f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -25,6 +32,30 @@ public class Base : StateMachineBehaviour
         positions.Add(new Vector3(planetExpressTransform.position.x - (line * 2), planetExpressTransform.position.y, planetExpressTransform.position.z - (row * 2)));
         positions.Add(new Vector3(planetExpressTransform.position.x, planetExpressTransform.position.y, planetExpressTransform.position.z - (row * 2)));
         positions.Add(new Vector3(planetExpressTransform.position.x + (line * 2), planetExpressTransform.position.y, planetExpressTransform.position.z - (row * 2)));
+
+        bulletPosition.Add(GameObject.Find("0_BulletSpawn").transform);
+        bulletPosition.Add(GameObject.Find("1_BulletSpawn").transform);
+        bulletPosition.Add(GameObject.Find("2_BulletSpawn").transform);
+        bulletPosition.Add(GameObject.Find("3_BulletSpawn").transform);
+        bulletPosition.Add(GameObject.Find("4_BulletSpawn").transform);
+        bulletPosition.Add(GameObject.Find("5_BulletSpawn").transform);
+
+        guns.Add(GameObject.Find("Gun_PlanetExpress"));
+        guns.Add(GameObject.Find("Gun_MobShip"));
+        guns.Add(GameObject.Find("Gun_GlobeTrotter"));
+        guns.Add(GameObject.Find("Gun_Delorian"));
+        guns.Add(GameObject.Find("Gun_SchoolBus"));
+        guns.Add(GameObject.Find("Gun_TieFighter"));
+
+        deathStars.Add(GameObject.Find("0_Target"));
+        deathStars.Add(GameObject.Find("0_Target (1)"));
+        deathStars.Add(GameObject.Find("0_Target (2)"));
+        deathStars.Add(GameObject.Find("0_Target (3)"));
+        deathStars.Add(GameObject.Find("0_Target (4)"));
+        deathStars.Add(GameObject.Find("0_Target (5)"));
+        deathStars.Add(GameObject.Find("0_Target (6)"));
+        deathStars.Add(GameObject.Find("0_Target (7)"));
+        deathStars.Add(GameObject.Find("0_Target (8)"));
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
