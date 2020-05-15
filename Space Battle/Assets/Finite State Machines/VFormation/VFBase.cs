@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class VFBase : StateMachineBehaviour
 {
-    public float fallIntoPositionTime = 3f;
+    public static float fallIntoPositionTime = 3f;
     public static GameObject[] ships = new GameObject[6];
+    public static GameObject[] guns = new GameObject[6];
     public static Vector3[] formationPositions = new Vector3[6];
     public static Transform[] bulletSpawnPositions = new Transform[6];
-    public GameObject bullet;
+    //public GameObject bullet;
     public static Animator animator;
+    public static float shipRotationSpeed = 0.2f;
 
     public static GameObject[] deathStars = new GameObject[9];
     public static Transform currentTarget;
@@ -26,6 +28,14 @@ public class VFBase : StateMachineBehaviour
         ships[3] = GameObject.Find("CyberpunkDeLorean");
         ships[4] = GameObject.Find("SchoolBus");
         ships[5] = GameObject.Find("Tie_Fighter");
+
+        //assaign the guns
+        guns[0] = GameObject.Find("Gun_PlanetExpress");
+        guns[1] = GameObject.Find("Gun_MobShip");
+        guns[2] = GameObject.Find("Gun_GlobeTrotter");
+        guns[3] = GameObject.Find("Gun_Delorian");
+        guns[4] = GameObject.Find("Gun_SchoolBus");
+        guns[5] = GameObject.Find("Gun_TieFighter");
 
         //assaign the v formation positions
         formationPositions[0] = GameObject.Find("PlanetExpress Pos").transform.position;

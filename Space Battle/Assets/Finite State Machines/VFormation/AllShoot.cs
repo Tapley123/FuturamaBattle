@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AllShoot : VFBase
 {
+    public GameObject bullet;
     private float elapsed = 0f;
     private float timeInbetweenBullets = 0.3f; // time inbetween each bullet firing
 
