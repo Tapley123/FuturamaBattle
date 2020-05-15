@@ -14,9 +14,9 @@ public class MoveInFormation : VFBase
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
 
-        
 
-        
+        //formationObject.transform.LookAt(new Vector3(currentTarget.position.x, currentTarget.position.y, currentTarget.position.z)); //rotate to position
+
         for (int i = 0; i <= ships.Length - 1; i++)
         {
             if(currentTarget.GetComponent<DeathstarMovement>().alive)
@@ -26,6 +26,7 @@ public class MoveInFormation : VFBase
                 //ships[i].transform.rotation = Quaternion.RotateTowards(ships[i].transform.rotation, Quaternion.LookRotation(currentTarget.position - ships[i].transform.position), Time.time * shipRotationSpeed); //rotate to position
                 //ships[i].transform.rotation = Quaternion.Lerp(ships[i].transform.rotation, Quaternion.LookRotation(currentTarget.position - ships[i].transform.position), Time.time * shipRotationSpeed); //rotate to position
                 guns[i].transform.rotation = Quaternion.Lerp(guns[i].transform.rotation, Quaternion.LookRotation(currentTarget.position - guns[i].transform.position), Time.time * shipRotationSpeed); //rotate to position
+                
             }
         }
     }

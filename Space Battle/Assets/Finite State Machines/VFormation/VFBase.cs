@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class VFBase : StateMachineBehaviour
 {
+    public static GameObject formationObject;
     public static float fallIntoPositionTime = 3f;
     public static GameObject[] ships = new GameObject[6];
     public static GameObject[] guns = new GameObject[6];
@@ -19,7 +20,8 @@ public class VFBase : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator = GameObject.Find("V Formation").GetComponent<Animator>();
+        formationObject = GameObject.Find("V Formation");
+        animator = formationObject.GetComponent<Animator>();
 
         //assaign the ships
         ships[0] = GameObject.Find("Planet Express 1");
