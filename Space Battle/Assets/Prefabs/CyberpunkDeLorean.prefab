@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1352113245350106938}
   m_Layer: 0
-  m_Name: BulletSpawn
+  m_Name: 3_BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,6 +883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6321117755648432647}
   - component: {fileID: 1352113244687222156}
+  - component: {fileID: 1554137237}
   m_Layer: 0
   m_Name: CyberpunkDeLorean
   m_TagString: Untagged
@@ -899,7 +900,7 @@ Transform:
   m_GameObject: {fileID: 7053277770943571988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20.5, y: -24.7, z: -62.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.5461, y: 3.5461, z: 3.5461}
   m_Children:
   - {fileID: 544674340388311963}
   - {fileID: 7123406954003399223}
@@ -933,6 +934,18 @@ MonoBehaviour:
   bullet: {fileID: 5724223407403294578, guid: 105bbc64d51df5142b5f5004839dc919, type: 3}
   bulletSpawn: {fileID: 1352113245350106938}
   shoot: 0
+--- !u!114 &1554137237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7053277770943571988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c72045b91af0ff4abbe6f05cb4da3e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7161853167996418708
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8721249374043087548}
   - component: {fileID: 3041217768191188549}
   - component: {fileID: 4695469254300633741}
+  - component: {fileID: 1603461033}
   m_Layer: 0
   m_Name: Tie_Fighter
   m_TagString: Untagged
@@ -102,6 +103,18 @@ MonoBehaviour:
   bullet: {fileID: 5724223407403294578, guid: 105bbc64d51df5142b5f5004839dc919, type: 3}
   bulletSpawn: {fileID: 4695469254427128045}
   shoot: 0
+--- !u!114 &1603461033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605207912403069593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c72045b91af0ff4abbe6f05cb4da3e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4695469254427128046
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4695469254427128045}
   m_Layer: 0
-  m_Name: Bullet Spawn
+  m_Name: 5_BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
