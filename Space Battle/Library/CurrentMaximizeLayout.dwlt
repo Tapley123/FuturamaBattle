@@ -22,10 +22,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 781, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 876, y: 342}
+  m_MaxSize: {x: 16001, y: 8042}
   vertical: 0
-  controlID: 42009
+  controlID: 48766
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 1171
     height: 947
-  m_MinSize: {x: 303, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 401, y: 342}
+  m_MaxSize: {x: 8001, y: 8042}
   vertical: 1
-  controlID: 42010
+  controlID: 48767
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,10 +161,10 @@ MonoBehaviour:
     y: 0
     width: 1171
     height: 676
-  m_MinSize: {x: 303, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 401, y: 221}
+  m_MaxSize: {x: 8001, y: 4021}
   vertical: 0
-  controlID: 42011
+  controlID: 48747
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AnimatorControllerTool
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -184,15 +184,15 @@ MonoBehaviour:
     y: 0
     width: 585
     height: 676
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 7}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
   - {fileID: 7}
   - {fileID: 8}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -229,9 +229,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -154.34721, y: 15.531574, z: 482.9217}
+    m_Target: {x: -297.4, y: 23.2, z: 18.6}
     speed: 2
-    m_Value: {x: -154.34721, y: 15.531574, z: 482.9217}
+    m_Value: {x: -297.4, y: 23.2, z: 18.6}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -277,13 +277,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.073803164, y: -0.074729666, z: 0.0059083453, w: -0.99455416}
+    m_Target: {x: -0.24643353, y: -0.123119116, z: 0.031934224, w: -0.96088374}
     speed: 2
-    m_Value: {x: -0.073795624, y: -0.07472203, z: 0.005907742, w: -0.9944526}
+    m_Value: {x: -0.24640827, y: -0.123106495, z: 0.03193095, w: -0.9607852}
   m_Size:
-    m_Target: 545.99506
+    m_Target: 122.2227
     speed: 2
-    m_Value: 545.99506
+    m_Value: 122.2227
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -355,14 +355,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.5357857
+    - e00: 1.0297074
       e01: 0
       e02: 0
-      e03: -4.277771
+      e03: -239.2962
       e10: 0
-      e11: 0.5357857
+      e11: 1.0297074
       e12: 0
-      e13: 110.08455
+      e13: 10.297089
       e20: 0
       e21: 0
       e22: 1
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -460,16 +460,16 @@ MonoBehaviour:
     y: 676
     width: 1171
     height: 271
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 3
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -509,11 +509,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Finite State Machines/New
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Finite State Machines/New
   m_LastFoldersGridSize: 64
   m_LastProjectPath: C:\Users\Conor Tapley\Documents\GitHub\GamesEngines2\FuturamaBattle\Space
     Battle
@@ -521,8 +521,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 95}
-    m_SelectedIDs: 90480000
-    m_LastClickedID: 18576
+    m_SelectedIDs: 36490000
+    m_LastClickedID: 18742
     m_ExpandedIDs: 0000000090480000924800008ac5050000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -576,8 +576,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 0ef6e7ff
+    m_LastClickedInstanceID: -1575410
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000002b00008cd60000f2d70000942d00007a5d0000f4b300005c3000006c410200aad50100
     m_RenameOverlay:
@@ -661,7 +661,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 393496
+  m_LastSelectedObjectID: -1659012
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -760,7 +760,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 70dbeaff04dceaff90dceaff1eddeaff0edeeaff8adeeaff10dfeaffb2dfeaff98e0eaff2ee7eaffccdeffff0af9ffff064c00003e4e000090eb05003efa0500
+      m_ExpandedIDs: f6b5e6ff70dbeaff04dceaff90dceaff1eddeaff0edeeaff8adeeaff10dfeaffb2dfeaff98e0eaff2ee7eaffccdeffff0af9ffff064c00003e4e000090eb05003efa05001efb0500
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -776,7 +776,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 15}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -848,7 +848,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: -1659012
   m_LastVerticalScrollValue: 0
 --- !u!114 &19
 MonoBehaviour:
