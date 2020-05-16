@@ -1,36 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Banking : StateMachineBehaviour
+public class Banking : Base
 {
+    public float angleOfRotation = 80f;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        base.OnStateEnter(animator, stateInfo, layerIndex);
+    }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        //rotate planet express ship by 60 degrees and move forward
+        planetExpressTransform.position = Vector3.MoveTowards(planetExpressTransform.position, target.transform.position, Time.deltaTime * moveSpeed);
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+        //planetExpressTransform.eulerAngles = new Vector3(planetExpressTransform.eulerAngles.x, planetExpressTransform.eulerAngles.y, 80);
 
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
+        Quaternion rotation = Quaternion.Euler(planetExpressTransform.eulerAngles.x, planetExpressTransform.eulerAngles.y, angleOfRotation);
+        planetExpressTransform.rotation = Quaternion.Lerp(planetExpressTransform.rotation, rotation, Time.deltaTime * rotationSpeed);
+    }
 
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
+
 }
