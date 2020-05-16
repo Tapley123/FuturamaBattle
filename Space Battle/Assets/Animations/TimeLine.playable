@@ -187,7 +187,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 0.5666666666666669
+    m_BlendOutDuration: 0.9267600223422061
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -247,16 +247,16 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PlanetExpressFrontFollow
   - m_Version: 1
-    m_Start: 2.4166666666666665
+    m_Start: 2.0565733109911273
     m_ClipIn: 0
     m_Asset: {fileID: -5042335335970029094}
-    m_Duration: 4.942941353966793
+    m_Duration: 5.626760022342206
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1648340777887424843}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.5666666666666669
-    m_BlendOutDuration: 0.3262746873001259
+    m_BlendInDuration: 0.9267600223422061
+    m_BlendOutDuration: 2.489172920336326
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -316,7 +316,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PlanetExpressGunFollow
   - m_Version: 1
-    m_Start: 7.033333333333333
+    m_Start: 5.194160412997007
     m_ClipIn: 0
     m_Asset: {fileID: 5552461358581895163}
     m_Duration: 5
@@ -324,7 +324,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 1648340777887424843}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.3262746873001259
+    m_BlendInDuration: 2.489172920336326
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyBullets : VFBase
+public class DestroyBullets : Base
 {
     [SerializeField] private Transform[] bullets;
     private Transform bulletHolder;

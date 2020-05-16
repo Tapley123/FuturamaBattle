@@ -8,6 +8,7 @@ public class DeathstarMovement : MonoBehaviour
     public bool alive = true;
     public float health = 100f;
     [SerializeField]private Animator stateMachineAnimator;
+    public GameObject explosion;
 
     private void Start()
     {
@@ -23,12 +24,20 @@ public class DeathstarMovement : MonoBehaviour
             alive = false;
         }
 
-        if(!alive)
+        if(health <= 2)
+        {
+            GameObject exp = Instantiate(explosion, transform.position, transform.rotation);
+            //Destroy(gameObject);
+        }
+            
+
+        if (!alive)
         {
             transform.position = new Vector3(10000, 10000, 10000);
+            this.gameObject.SetActive(false);
+            stateMachineAnimator.SetBool("CurrentTargetDead", true);
         }
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Bullet"))

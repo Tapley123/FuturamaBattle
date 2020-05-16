@@ -14,8 +14,6 @@ public class TargetDeathStar : Base
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
 
-        
-
         for(int i = 0; i < deathStars.Count; i++)
         {
             if(deathStars[i].GetComponent<DeathstarMovement>().alive)
