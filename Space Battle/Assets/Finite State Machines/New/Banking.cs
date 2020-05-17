@@ -6,6 +6,7 @@ using UnityEngine;
 public class Banking : Base
 {
     public float angleOfRotation = 80f;
+    public float rotSpeed = 1f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -22,7 +23,7 @@ public class Banking : Base
         //planetExpressTransform.eulerAngles = new Vector3(planetExpressTransform.eulerAngles.x, planetExpressTransform.eulerAngles.y, 80);
 
         Quaternion rotation = Quaternion.Euler(planetExpressTransform.eulerAngles.x, planetExpressTransform.eulerAngles.y, angleOfRotation);
-        planetExpressTransform.rotation = Quaternion.Lerp(planetExpressTransform.rotation, rotation, Time.deltaTime * rotationSpeed);
+        planetExpressTransform.rotation = Quaternion.Lerp(planetExpressTransform.rotation, rotation, Time.deltaTime * rotSpeed);
     }
 
 

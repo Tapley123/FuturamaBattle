@@ -11,15 +11,15 @@ public class Progress : Base
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
         deathStar3 = GameObject.Find("0_Target (2)").GetComponent<DeathstarMovement>();
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(!deathStar3.alive)
-        {
             animator.SetTrigger("DeathStar3Destroyed");
-        }
+
     }
 
 }
