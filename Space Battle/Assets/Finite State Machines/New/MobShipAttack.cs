@@ -7,7 +7,10 @@ public class MobShipAttack : Base
     private Transform mobShipTransform;
     private Transform deathStarTransform;
     public float speed = 30f;
+
     public GameObject bullet;
+    private float elapsed = 0f;
+    public float timeInbetweenBullets = 0.3f; // time inbetween each bullet firing
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -28,7 +31,20 @@ public class MobShipAttack : Base
         Vector3 direction = deathStarTransform.position - mobShipTransform.position;
         Quaternion rotation = Quaternion.LookRotation(direction);
         mobShipTransform.rotation = Quaternion.Lerp(mobShipTransform.rotation, rotation, rotationSpeed * Time.deltaTime);
+
+
+        guns[1].transform.LookAt(target);
+        elapsed += Time.deltaTime; // get time that elapsed
+        if (elapsed >= timeInbetweenBullets)// && shoot)
+        {
+            elapsed = elapsed % timeInbetweenBullets; //reset the timer
+
+            GameObject instance = GameObject.Instantiate(bullet, bulletPosition[1].position, bulletPosition[1].rotation);
+            instance.transform.forward = bulletPosition[1].forward;
+            instance.transform.parent = GameObject.Find("BulletHolder").transform;
+            }
+        }
     }
 
     
-}
+

@@ -9,10 +9,15 @@ public class DeathstarMovement : MonoBehaviour
     public float health = 100f;
     [SerializeField]private Animator stateMachineAnimator;
     public GameObject explosion;
+    private bool exploded = false;
+
+    public string dName; 
 
     private void Start()
     {
         stateMachineAnimator = GameObject.Find("Planet Express 1").GetComponent<Animator>();
+
+        dName = this.gameObject.name;
     }
 
     void Update()
@@ -24,9 +29,11 @@ public class DeathstarMovement : MonoBehaviour
             alive = false;
         }
 
-        if(health <= 2)
+        if(health <= 2 && !exploded)
         {
             GameObject exp = Instantiate(explosion, transform.position, transform.rotation);
+            exp.transform.parent = GameObject.Find("Explosions").transform;
+            exploded = true;
             //Destroy(gameObject);
         }
             
@@ -34,7 +41,7 @@ public class DeathstarMovement : MonoBehaviour
         if (!alive)
         {
             transform.position = new Vector3(10000, 10000, 10000);
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
             stateMachineAnimator.SetBool("CurrentTargetDead", true);
         }
     }
