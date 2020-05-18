@@ -17,6 +17,7 @@ public class Base : StateMachineBehaviour
     
     private float row = 20f, line = 20f;
 
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -67,6 +68,7 @@ public class Base : StateMachineBehaviour
         targets.Add(GameObject.Find("0_Target (6)").GetComponent<DeathstarMovement>());
         targets.Add(GameObject.Find("0_Target (7)").GetComponent<DeathstarMovement>());
         targets.Add(GameObject.Find("0_Target (8)").GetComponent<DeathstarMovement>());
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
