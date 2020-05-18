@@ -26,33 +26,33 @@ public class MobShipAttack : Base
     {
         float distance = Vector3.Distance(mobShipTransform.position, deathStarTransform.position);
 
-        if(distance > 100)//stop moving if close enough to target
+        if(distance > 100 && deathStarTransform.GetComponent<DeathstarMovement>().alive)//stop moving if close enough to target
         {
             //move ship to target
             mobShipTransform.position = Vector3.MoveTowards(mobShipTransform.position, deathStarTransform.position, Time.deltaTime * speed);
+
+            //transform.LookAt(target.transform);
+            Vector3 direction = deathStarTransform.position - mobShipTransform.position;
+            Quaternion rotation = Quaternion.LookRotation(direction);
+            mobShipTransform.rotation = Quaternion.Lerp(mobShipTransform.rotation, rotation, rotationSpeed * Time.deltaTime);
+
+
+            guns[1].transform.LookAt(target);
+            elapsed += Time.deltaTime; // get time that elapsed
+            if (elapsed >= timeInbetweenBullets)// && shoot)
+            {
+                elapsed = elapsed % timeInbetweenBullets; //reset the timer
+
+                GameObject instance = GameObject.Instantiate(bullet, bulletPosition[1].position, bulletPosition[1].rotation);
+                instance.transform.forward = bulletPosition[1].forward;
+                instance.transform.parent = GameObject.Find("BulletHolder").transform;
+            }
         }
         else
             deathStars[5].GetComponent<DeathstarMovement>().health = 0;
-
-
-        //transform.LookAt(target.transform);
-        Vector3 direction = deathStarTransform.position - mobShipTransform.position;
-        Quaternion rotation = Quaternion.LookRotation(direction);
-        mobShipTransform.rotation = Quaternion.Lerp(mobShipTransform.rotation, rotation, rotationSpeed * Time.deltaTime);
-
-
-        guns[1].transform.LookAt(target);
-        elapsed += Time.deltaTime; // get time that elapsed
-        if (elapsed >= timeInbetweenBullets)// && shoot)
-        {
-            elapsed = elapsed % timeInbetweenBullets; //reset the timer
-
-            GameObject instance = GameObject.Instantiate(bullet, bulletPosition[1].position, bulletPosition[1].rotation);
-            instance.transform.forward = bulletPosition[1].forward;
-            instance.transform.parent = GameObject.Find("BulletHolder").transform;
-            }
-        }
     }
+        
+}
 
     
 

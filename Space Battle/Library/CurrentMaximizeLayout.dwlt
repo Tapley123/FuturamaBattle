@@ -22,10 +22,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 779, y: 492}
-  m_MaxSize: {x: 18002, y: 14042}
+  m_MinSize: {x: 781, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 43081
+  controlID: 45292
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 303, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 43082
+  controlID: 45241
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 43083
+  controlID: 45190
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -509,11 +509,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Finite State Machines/New
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Finite State Machines/New
   m_LastFoldersGridSize: 64
   m_LastProjectPath: C:\Users\Conor Tapley\Documents\GitHub\GamesEngines2\FuturamaBattle\Space
     Battle
@@ -521,8 +521,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 90}
-    m_SelectedIDs: d4080100
-    m_LastClickedID: 67796
+    m_SelectedIDs: b4080100
+    m_LastClickedID: 67764
     m_ExpandedIDs: 000000004a4800004c4800004e48000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -576,9 +576,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7a470000
-    m_LastClickedInstanceID: 18298
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 866bf2ff
+    m_LastClickedInstanceID: -889978
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000002b00008cd60000f2d70000942d00007a5d0000f4b300005c3000006c410200aad50100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -722,8 +722,8 @@ MonoBehaviour:
     y: 0
     width: 257
     height: 947
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -848,7 +848,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 18298
+  m_LastInspectedObjectInstanceID: -889978
   m_LastVerticalScrollValue: 0
 --- !u!114 &19
 MonoBehaviour:
