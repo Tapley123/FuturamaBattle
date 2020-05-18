@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class Progress : Base
 {
-    public DeathstarMovement deathStar3;
-
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-
-        deathStar3 = GameObject.Find("0_Target (2)").GetComponent<DeathstarMovement>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(!deathStar3.alive)
-        {
+        
+        //if (!targets[0].alive)
+            //animator.SetTrigger("DeathStar1Destroyed");
+
+        //if (!targets[1].alive)
+            //animator.SetTrigger("DeathStar2Destroyed");
+
+        if (!targets[2].alive)
             animator.SetTrigger("DeathStar3Destroyed");
-        }
+
+        if (!targets[3].alive)
+            animator.SetTrigger("DeathStar4Destroyed");
+
+        //if (!targets[4].alive)
+            //animator.SetTrigger("DeathStar5Destroyed");
+
+        if (!targets[5].alive)
+            animator.SetTrigger("DeathStar6Destroyed");
+
+        if (!targets[6].alive)
+            animator.SetTrigger("DeathStar7Destroyed");
     }
 
 }

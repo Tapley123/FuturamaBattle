@@ -9,12 +9,14 @@ public class Base : StateMachineBehaviour
     public static List<Transform> bulletPosition = new List<Transform>();
     public static List<GameObject> guns = new List<GameObject>();
     public static List<GameObject> deathStars = new List<GameObject>();
+    public static List<DeathstarMovement> targets = new List<DeathstarMovement>();
     public static Transform planetExpressTransform;
     public static Transform target;
     public static float moveSpeed = 10f, rotationSpeed = 1f;
 
     
     private float row = 20f, line = 20f;
+
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -54,8 +56,15 @@ public class Base : StateMachineBehaviour
         deathStars.Add(GameObject.Find("0_Target (4)"));
         deathStars.Add(GameObject.Find("0_Target (5)"));
         deathStars.Add(GameObject.Find("0_Target (6)"));
-        deathStars.Add(GameObject.Find("0_Target (7)"));
-        deathStars.Add(GameObject.Find("0_Target (8)"));
+
+        targets.Add(GameObject.Find("0_Target").GetComponent<DeathstarMovement>());
+        targets.Add(GameObject.Find("0_Target (1)").GetComponent<DeathstarMovement>());
+        targets.Add(GameObject.Find("0_Target (2)").GetComponent<DeathstarMovement>());
+        targets.Add(GameObject.Find("0_Target (3)").GetComponent<DeathstarMovement>());
+        targets.Add(GameObject.Find("0_Target (4)").GetComponent<DeathstarMovement>());
+        targets.Add(GameObject.Find("0_Target (5)").GetComponent<DeathstarMovement>());
+        targets.Add(GameObject.Find("0_Target (6)").GetComponent<DeathstarMovement>());
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

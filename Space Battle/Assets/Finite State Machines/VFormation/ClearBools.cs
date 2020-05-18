@@ -8,7 +8,7 @@ public class ClearBools : Base
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex); //call the enter state from the base class
-
+        animator.SetBool("CurrentTargetDead", false);
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -16,6 +16,6 @@ public class ClearBools : Base
         base.OnStateUpdate(animator, stateInfo, layerIndex);
 
         //animator.SetBool("TargetAquired", false);'
-        animator.SetBool("CurrentTargetDead", false);
+        
     }
 }
