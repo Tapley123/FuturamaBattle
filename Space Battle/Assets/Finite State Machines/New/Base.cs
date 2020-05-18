@@ -67,7 +67,6 @@ public class Base : StateMachineBehaviour
         targets.Add(GameObject.Find("0_Target (5)").GetComponent<DeathstarMovement>());
         targets.Add(GameObject.Find("0_Target (6)").GetComponent<DeathstarMovement>());
         targets.Add(GameObject.Find("0_Target (7)").GetComponent<DeathstarMovement>());
-        targets.Add(GameObject.Find("0_Target (8)").GetComponent<DeathstarMovement>());
 
     }
 
