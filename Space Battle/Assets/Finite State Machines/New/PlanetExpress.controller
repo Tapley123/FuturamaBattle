@@ -155,7 +155,8 @@ AnimatorState:
   m_Name: Triple Bank
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: 5574751159182298688}
   m_StateMachineBehaviours:
   - {fileID: 1417444927250994023}
   m_Position: {x: 50, y: 50, z: 0}
@@ -482,7 +483,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack 6
+  m_Name: MobShip Attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -553,7 +554,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 7878700331084431536}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -658,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07459c5a133f9f49906c456955874ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 50
   bullet: {fileID: 1226140919531817391, guid: d14428d514240904cb40a9cf947ce7d1, type: 3}
   timeInbetweenBullets: 0.2
 --- !u!114 &2661206184498586465
@@ -721,6 +723,28 @@ AnimatorStateTransition:
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 126940988989067473}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &5574751159182298688
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1455317433352845329}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -857,6 +881,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a058c15c52be34a42b37d5081a6fae3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7878700331084431536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af7e8d904b47a64e9c2d69421ecf134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.2
+  bullet: {fileID: 7135473034720043398, guid: 58ab76bb45574a94395cc56c3fbf8ceb, type: 3}
+  timeInbetweenBullets: 0.2
 --- !u!1101 &8715342798607432383
 AnimatorStateTransition:
   m_ObjectHideFlags: 3

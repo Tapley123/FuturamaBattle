@@ -56,8 +56,6 @@ public class Base : StateMachineBehaviour
         deathStars.Add(GameObject.Find("0_Target (4)"));
         deathStars.Add(GameObject.Find("0_Target (5)"));
         deathStars.Add(GameObject.Find("0_Target (6)"));
-        deathStars.Add(GameObject.Find("0_Target (7)"));
-        deathStars.Add(GameObject.Find("0_Target (8)"));
 
         targets.Add(GameObject.Find("0_Target").GetComponent<DeathstarMovement>());
         targets.Add(GameObject.Find("0_Target (1)").GetComponent<DeathstarMovement>());
@@ -66,7 +64,6 @@ public class Base : StateMachineBehaviour
         targets.Add(GameObject.Find("0_Target (4)").GetComponent<DeathstarMovement>());
         targets.Add(GameObject.Find("0_Target (5)").GetComponent<DeathstarMovement>());
         targets.Add(GameObject.Find("0_Target (6)").GetComponent<DeathstarMovement>());
-        targets.Add(GameObject.Find("0_Target (7)").GetComponent<DeathstarMovement>());
 
     }
 
