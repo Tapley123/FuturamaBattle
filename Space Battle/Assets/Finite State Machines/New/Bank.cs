@@ -9,10 +9,12 @@ public class Bank : MonoBehaviour
     public float moveSpeed = 0.5f;
     public float timeTillBank = 1f;
     private bool bank = false;
+    
 
     void Start()
     {
         StartCoroutine(WaitCoroutine(timeTillBank));
+        
     }
 
     

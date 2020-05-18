@@ -31,11 +31,8 @@ public class Progress : Base
         if (!targets[5].alive)
             animator.SetTrigger("DeathStar6Destroyed");
 
-        //if (!targets[6].alive)
-            //animator.SetTrigger("DeathStar7Destroyed");
-
-        //if (!targets[7].alive)
-            //animator.SetTrigger("DeathStar8Destroyed");
+        if (!targets[6].alive)
+            animator.SetTrigger("DeathStar7Destroyed");
     }
 
 }

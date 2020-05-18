@@ -29,7 +29,7 @@ public class DeathstarMovement : MonoBehaviour
             alive = false;
         }
 
-        if(health <= 2 && !exploded)
+        if(health <= 1 && !exploded)
         {
             GameObject exp = Instantiate(explosion, transform.position, transform.rotation);
             exp.transform.parent = GameObject.Find("Explosions").transform;

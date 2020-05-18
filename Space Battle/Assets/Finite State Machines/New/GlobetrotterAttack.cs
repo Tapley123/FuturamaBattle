@@ -37,15 +37,20 @@ public class GlobetrotterAttack : Base
         globeTrotterShipTransform.rotation = Quaternion.Lerp(globeTrotterShipTransform.rotation, rotation, rotationSpeed * Time.deltaTime);
 
 
-        guns[1].transform.LookAt(Base.target);
-        elapsed += Time.deltaTime; // get time that elapsed
-        if (elapsed >= timeInbetweenBullets)// && shoot)
-        {
-            elapsed = elapsed % timeInbetweenBullets; //reset the timer
+        float distance = Vector3.Distance(globeTrotterShipTransform.position, bulletTarget.position);
 
-            GameObject instance = GameObject.Instantiate(bullet, gun.position, gun.rotation);
-            instance.transform.forward = gun.forward;
-            instance.transform.parent = GameObject.Find("BulletHolder").transform;
+        if (distance < 500)//stop moving if close enough to target
+        {
+            guns[1].transform.LookAt(Base.target);
+            elapsed += Time.deltaTime; // get time that elapsed
+            if (elapsed >= timeInbetweenBullets)// && shoot)
+            {
+                elapsed = elapsed % timeInbetweenBullets; //reset the timer
+
+                GameObject instance = GameObject.Instantiate(bullet, gun.position, gun.rotation);
+                instance.transform.forward = gun.forward;
+                instance.transform.parent = GameObject.Find("BulletHolder").transform;
+            }
         }
     }
 }
