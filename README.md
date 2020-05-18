@@ -19,8 +19,7 @@ Scene 3 will show a few of the ships doing the banking steering behaviour.
 ![](Images/5.png)
 The globetrotters ship will shoot basketballs at another one of the deathstars.
 
-![](Images/6.png)
-Scene 4 will follow this small rocket to destroy the last deathstar.
+
 
 
 ![](Images/Planet%20Express.png)
