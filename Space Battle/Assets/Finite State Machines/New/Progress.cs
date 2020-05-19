@@ -13,8 +13,8 @@ public class Progress : Base
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         
-        //if (!targets[0].alive)
-            //animator.SetTrigger("DeathStar1Destroyed");
+        if (!targets[0].alive)
+            animator.SetTrigger("DeathStar1Destroyed");
 
         //if (!targets[1].alive)
             //animator.SetTrigger("DeathStar2Destroyed");
