@@ -14,7 +14,6 @@ public class Bank : MonoBehaviour
     void Start()
     {
         StartCoroutine(WaitCoroutine(timeTillBank));
-        
     }
 
     
@@ -32,6 +31,5 @@ public class Bank : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         bank = true;
-
     }
 }
