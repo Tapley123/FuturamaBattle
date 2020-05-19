@@ -5,7 +5,6 @@ using UnityEngine;
 public class Formation : Base
 {
     private float lerpTime = 0.2f;
-    private float runTime = 5f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
