@@ -49,19 +49,6 @@ MonoBehaviour:
   rotSpeed: 1
   moveSpeed: 0.5
   timeTillBank: 1.5
---- !u!114 &7284461555440362114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4393576117872960099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 740e31872b3dd5344b82fbfe7b0c500a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xVal: 37
 --- !u!114 &1076742174419077734
 MonoBehaviour:
   m_ObjectHideFlags: 0
