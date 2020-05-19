@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PositionShips : Base
 {
-    //public List<Vector3> pos = new List<Vector3>();
-    //public float speed = 1f;
     public GameObject bankingShips;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

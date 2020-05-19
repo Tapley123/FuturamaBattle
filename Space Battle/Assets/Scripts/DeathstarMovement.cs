@@ -39,11 +39,7 @@ public class DeathstarMovement : MonoBehaviour
             
 
         if (!alive)
-        {
             transform.position = new Vector3(10000, 10000, 10000);
-            //this.gameObject.SetActive(false);
-            stateMachineAnimator.SetBool("CurrentTargetDead", true);
-        }
     }
     private void OnTriggerEnter(Collider other)
     {
