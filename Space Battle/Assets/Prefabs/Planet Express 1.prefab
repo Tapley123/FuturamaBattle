@@ -22954,7 +22954,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5958835121923982875}
-  - component: {fileID: 1133009656}
   m_Layer: 0
   m_Name: Planet Express 1
   m_TagString: Untagged
@@ -22980,30 +22979,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 88.704, z: 0}
---- !u!114 &1133009656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5958835121923982874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5052f17ac07ee944ac94e4c8de9fbef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ships:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  lerpTime: 0.02
-  moveSpeed: 3
-  rotationSpeed: 1
-  row: 20
-  line: 20
-  target: {fileID: 0}
 --- !u!1 &5958835122263067200
 GameObject:
   m_ObjectHideFlags: 0
