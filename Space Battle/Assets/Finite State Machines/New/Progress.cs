@@ -12,7 +12,13 @@ public class Progress : Base
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        for (int i = 0; i < 6; i++)
+        {
+            if (!targets[i].alive)
+                animator.SetTrigger("DeathStar" + (i + 1) + "Destroyed");
+        }
+
+        /*
         if (!targets[0].alive)
             animator.SetTrigger("DeathStar1Destroyed");
 
@@ -33,6 +39,8 @@ public class Progress : Base
 
         if (!targets[6].alive)
             animator.SetTrigger("DeathStar7Destroyed");
+        */
+        
     }
 
 }

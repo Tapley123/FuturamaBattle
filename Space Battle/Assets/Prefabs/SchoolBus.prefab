@@ -21309,8 +21309,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8061318236395654915}
-  - component: {fileID: 1600145656}
-  - component: {fileID: 1164113824}
   m_Layer: 0
   m_Name: SchoolBus
   m_TagString: Untagged
@@ -21339,33 +21337,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1600145656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8061318236395654914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b554760ce20ba084194c009149f32210, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 5724223407403294578, guid: 105bbc64d51df5142b5f5004839dc919, type: 3}
-  bulletSpawn: {fileID: 1448540208}
-  shoot: 0
---- !u!114 &1164113824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8061318236395654914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c72045b91af0ff4abbe6f05cb4da3e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8061318236428563539
 GameObject:
   m_ObjectHideFlags: 0
