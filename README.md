@@ -24,3 +24,15 @@ The globetrotters ship will shoot basketballs at another one of the deathstars.
 
 ![](Images/Planet%20Express.png)
 This is an image of the planet express ship that I have modeled using probuilder
+
+
+Instructions.
+Press Play!
+
+How it Works?
+Completely automatic. The scene will play entirely unassisted while using cinemachine to get different camera angles.
+
+What I am most proud of?
+I am proud that I was able to accomplish this using only one scene in unity as I coded a very clever AI for the ships using state machines. And I am very proud of the 3d models I made for this project. I modeled the planet express ship, mob ship(Black ship) and Globetrotter ship (UFO basketball ship).
+
+I also wrote all of the code myself.
